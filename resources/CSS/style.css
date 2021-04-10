@@ -1,0 +1,394 @@
+/* ------------------------------------------------ */
+
+/* ------ BASIC SETUP ------ */
+
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html{
+    
+    background-color: #fff;                         /* A default white color for the background */
+    color: #555;                                    /* A grey color for the html content */
+    font-family: 'Lato', 'Arial', 'sans-serif';     /* In case of if Lato doesn't work, Arial will work instead. Same goes for sans-serif. */ 
+    font-size: 20px;   
+    font-weight: 300;
+    text-rendering: optimizeLegibility;             /* This makes font rendering in a perfect way */
+    
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ------------------------------------------------ */
+
+/* ------ REUSABLE STUFF ------ */ 
+
+.row {
+    
+    max-width: 1140px;                              /* This is the ONLY setting that we use pixels in it. Others will be in PERCENTAGES */
+    margin: 0 auto;                                 /* Top and Bottom margins are 0, Right and Left margins set to auto to autofill. */
+    
+}
+
+section {
+    
+    padding: 80px 0px;
+    
+}
+
+.box {
+    
+    padding: 1%;
+    
+}
+
+/* ------------------------------------------------ */
+
+/* ------ HEADINGS ------ */
+
+h1,
+h2,
+h3{
+    
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+h1 {
+    
+    margin: 0;                                      /* The reason we used this margin setting is just because normalized css file has some margins. */ 
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    margin-bottom: 30px;
+
+}
+
+h2 {
+    
+    font-size: 180%;
+    word-spacing: 1px;
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+h3 {
+    
+    font-size: 110%;
+    margin-bottom: 15px;
+    
+}
+h2:after {
+    
+    display: block;
+    background-color: #e67e22;
+    width: 100px;
+    height: 2px;
+    margin: 0px auto;
+    content: " ";
+    margin-top: 30px;
+    
+}
+/* ------------------------------------------------ */
+
+/* ------ PARAGRAPHS ------ */
+
+.long-copy {
+
+    width: 70%;
+    margin-left: 15%;
+    line-height: 145%;
+    
+}
+
+.box p {
+    
+    font-size: 90%;
+    line-height: 145%;
+    
+}
+
+/* ------------------------------------------------ */
+
+/* ------ FEATURES ------ */
+
+.section-features .long-copy {
+    
+    margin-bottom: 30px;
+    
+}
+
+
+/* ------------------------------------------------ */
+
+/* ------ ICONS ------ */
+
+.icon-big {
+    
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+    
+}
+
+/* ------------------------------------------------ */
+/* ------ BUTTONS ------ */
+
+.button:link,
+.button:visited{
+    
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-weight: 400;
+    border-radius: 200px;
+    color: #fff;
+    transition: color 0.8s, border 0.8s, background-color 0.8s;
+    
+}
+
+.button-full:link,
+.button-full:visited{
+    
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    margin-right: 7px;
+    
+}
+
+.button-ghost:link,
+.button-ghost:visited{
+    
+    border: 1px solid #e67e22;
+    color: #e67e22;
+    
+}
+
+.button:hover,
+.button:active{
+    
+    color: #fff;
+    
+}
+
+.button-full:hover,
+.button-full:active{
+    
+    border: 1px solid #fff;
+    background-color: #e88731;
+
+}
+
+.button-ghost:hover,
+.button-ghost:active{
+    
+    border: 1px solid #cf6d17;
+    color: #fff;
+    
+}
+
+/* ------------------------------------------------ */
+
+/* ------ HEADER ------ */
+
+header {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Background_Images/hero.jpg);
+    height: 100vh;                                  /* This provides us to fill picture into browser with its height. */
+    background-size: cover;                         /* This provides us to see whole Hero Picture on the browser. */
+    background-position: center;                    /* This provides us to set the background centered. */
+    
+}
+
+.hero-text-box{
+    
+    position: absolute;                             /* By setting position to absolute we can put our content wherever we want. */
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.logo{
+    
+    height: 200px;
+    width: auto;
+    margin-top: 50px;
+    float: left;
+}
+
+.main-navigation{
+    
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+    
+}
+
+.main-navigation li{
+    
+    display: inline-block;                          /* By specifying this property, we got all links side by side. */
+    margin-left: 40px;
+    margin-top: 20px; 
+
+}
+
+.main-navigation li a:link,
+.main-navigation li a:visited{
+    
+    padding: 6px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;           /* We specified this line because when we hovering it it was white, then orange. We fixed it. */
+    font-weight: 400;
+    
+}
+
+.main-navigation li a:hover,
+.main-navigation li a:active{
+    
+    border-bottom: 2px solid #e67e22;
+    transition: border-bottom 0.8s;
+
+}
+
+/* ------------------------------------------------ */
+
+/* ------ MEALS ------ */
+
+.section-meals {
+    
+    padding: 0;
+    
+}
+
+.meals-showcase {
+    
+    list-style: none;
+    width: 100%
+    
+}
+
+.meals-showcase li {
+    
+    display: block;
+    float: left;
+    width: 25%;
+    
+}
+
+.meal-photo {
+    
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    
+}
+
+.meal-photo img {
+    
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    opacity: 0.7;
+
+}
+
+.meal-photo img:hover {
+    
+    transform: scale(1.01);
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 1;
+    
+}
+
+/* ------------------------------------------------ */
+
+/* ------ HOW IT WORKS ------ */
+
+
+.section-steps {
+    
+    background-color: #f4f4f4;
+    
+}
+
+.steps-box:first-child {
+    
+    text-align: right;
+    padding-right: 5%;
+    margin-top: 30px;
+
+}
+
+.steps-box:last-of-type {
+    
+    padding-left:3%;
+    margin-top:70px;
+    
+}
+
+.app-screen {
+    
+    width: 40%;
+    
+}
+
+.works-step {
+    
+    margin-bottom: 50px;
+    
+}
+
+.works-step:last-of-type {
+    
+    margin-bottom: 80px;
+    
+}
+
+.works-step div {
+    
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+    
+}
+
+.app-buttons img{
+    
+    margin-right: 15px;
+    
+}
+
+ 
+
+
+
+
